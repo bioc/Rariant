@@ -29,8 +29,8 @@ rariantFromBam <- function(test, control, region, beta = 0.95, alpha = 1 - beta,
         roi = chunks[i]
         n = width(roi)
 
-        test_tally = tallyBamRegion(path(test), roi, nCycles, minQual)
-        control_tally = tallyBamRegion(path(control), roi, nCycles, minQual)
+        test_tally = tallyBamRegion(test, roi, nCycles, minQual)
+        control_tally = tallyBamRegion(control, roi, nCycles, minQual)
 
         rar = rariantFromMatrix(test_tally, control_tally, roi, beta, alpha, select, consensus, strand, criteria)
 
@@ -46,14 +46,18 @@ rariantFromBam <- function(test, control, region, beta = 0.95, alpha = 1 - beta,
     }
     
     res = NULL ## must be set
-    if(value) {
+    if(value & length(val) > 0) {
         res = rbind_all(val) ## or unlist on a GRL
-        if(!is.null(res)) {
-            res = df2gr(res)       
-            seqinfo(res) = seq_info_test[seqlevels(res)]
-            metadata(res) = args
-        }
+        #if(!is.null(res)) { ## TODO: needed?
+        res = df2gr(res)
+        #}
+    } else {
+        res = GRanges()
     }
+    ## Setting the seqinfo here means that there is none
+    ## if no variant is returned
+    seqinfo(res) = seq_info_test[seqlevels(res)]
+    metadata(res) = args
     
     return(res)
 }

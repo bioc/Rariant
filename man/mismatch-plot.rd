@@ -1,6 +1,5 @@
-\name{mismatchPlotRegion}
+\name{tallyPlot}
 
-\alias{mismatchPlotRegion}
 \alias{tallyPlot}
 
 \title{Mismatch plot from BAM files}
@@ -12,21 +11,17 @@
 }
 
 \usage{
-  mismatchPlotRegion(files, region, win = 25, ref, ...)
-
   tallyPlot(file, region, ref, nCycles = 0, minQual = 0, minFreq = 0, ...)
 }
 
 
 \arguments{
 
-  \item{files, file}{BAM file paths}
+  \item{file}{BAM file paths}
 
   \item{region}{GRanges with the position (width: 1) to tally, with one
     entry.}
 
-  \item{win}{Window size, extending the region on both sides.}
-  
   \item{ref}{Reference object, as 'BSgenome'.}
 
   \item{nCycles}{Number of sequencing cycles to remove from the
@@ -64,27 +59,22 @@
 
   region = GRanges("chr17", IRanges(7572100, width = 1))
 
-  control_bam = system.file("extdata", "control.bam", package =
+  control_bam = system.file("extdata", "platinum", "control.bam", package =
   "Rariant", mustWork = TRUE)
-  mix_bam = system.file("extdata", "mix.bam", package = "Rariant",
+  mix_bam = system.file("extdata", "platinum", "mix.bam", package = "Rariant",
   mustWork = TRUE)
 
   bam_files = c(control_bam, mix_bam)
 
-  p = mismatchPlotRegion(bam_files, region, win = 50,
-  BSgenome.Hsapiens.UCSC.hg19)
-
-  print(p)
-
   region = GRanges("chr17", IRanges(7572050, width = 100))
 
-  control_bam = system.file("extdata", "control.bam", package =
+  control_bam = system.file("extdata", "platinum", "control.bam", package =
     "Rariant", mustWork = TRUE)
-  test1_bam = system.file("extdata", "test.bam", package =
+  test1_bam = system.file("extdata", "platinum", "test.bam", package =
     "Rariant", mustWork = TRUE)
-  test2_bam = system.file("extdata", "test2.bam", package =
+  test2_bam = system.file("extdata", "platinum", "test2.bam", package =
     "Rariant", mustWork = TRUE)
-  mix_bam = system.file("extdata", "mix.bam", package =
+  mix_bam = system.file("extdata", "platinum", "mix.bam", package =
     "Rariant", mustWork = TRUE)
 
   bam_files = c(control_bam, test1_bam, test2_bam, mix_bam)
