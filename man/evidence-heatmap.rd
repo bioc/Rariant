@@ -13,7 +13,7 @@
 \usage{
 
   evidenceHeatmap(x, fill = "d", color = "outside",
-                   height = 0.9, width = 0.95, size = 1.5,
+                   size = 1.5,
                    xvar = "sample", yvar = "loc", ...)
 
 }
@@ -25,8 +25,6 @@
   \item{fill}{Column determining the fill.}
 
   \item{color}{Column determining the border color.}
-  
-  \item{height, width}{Height and width of tiles.}
   
   \item{size}{What is this needed for?}
   
