@@ -3,7 +3,7 @@ Type: Package
 Title: Identification and Assessment of Single Nucleotide Variants through Shifts in Non-Consensus Base Call Frequencies
 Version: 1.6.1
 Author: Julian Gehring, Simon Anders, Bernd Klaus (EMBL Heidelberg)
-Maintainer: Julian Gehring <julian.gehring@embl.de>
+Maintainer: Julian Gehring <jg-bico@gmx.com>
 Imports: IRanges, ggbio, ggplot2, exomeCopy, SomaticSignatures, Rsamtools, shiny, methods, VGAM, dplyr, reshape2, GenomeInfoDb, S4Vectors
 Depends: R (>= 3.0.2), GenomicRanges, VariantAnnotation
 Suggests: h5vcData, testthat, knitr, optparse, BSgenome.Hsapiens.UCSC.hg19
