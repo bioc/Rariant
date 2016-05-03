@@ -1,7 +1,7 @@
 Package: Rariant
 Type: Package
 Title: Identification and Assessment of Single Nucleotide Variants through Shifts in Non-Consensus Base Call Frequencies
-Version: 1.7.2
+Version: 1.8.0
 Author: Julian Gehring, Simon Anders, Bernd Klaus (EMBL Heidelberg)
 Maintainer: Julian Gehring <jg-bioc@gmx.com>
 Imports: methods, S4Vectors (>= 0.9.25), IRanges, GenomeInfoDb, ggbio, ggplot2, exomeCopy, SomaticSignatures, Rsamtools, shiny, VGAM, dplyr, reshape2
