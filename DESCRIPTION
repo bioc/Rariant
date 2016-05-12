@@ -1,10 +1,10 @@
 Package: Rariant
 Type: Package
 Title: Identification and Assessment of Single Nucleotide Variants through Shifts in Non-Consensus Base Call Frequencies
-Version: 1.8.1
-Author: Julian Gehring, Simon Anders, Bernd Klaus (EMBL Heidelberg)
+Version: 1.8.2
+Author: Julian Gehring, Simon Anders, Bernd Klaus
 Maintainer: Julian Gehring <jg-bioc@gmx.com>
-Imports: methods, S4Vectors (>= 0.9.25), IRanges, GenomeInfoDb, ggbio, ggplot2, exomeCopy, SomaticSignatures, Rsamtools, shiny, VGAM, dplyr, reshape2
+Imports: methods, S4Vectors, IRanges, GenomeInfoDb, ggbio, ggplot2, exomeCopy, SomaticSignatures, Rsamtools, shiny, VGAM, dplyr, reshape2
 Depends: R (>= 3.0.2), GenomicRanges, VariantAnnotation
 Suggests: h5vcData, testthat, knitr, optparse, BSgenome.Hsapiens.UCSC.hg19
 Description: The 'Rariant' package identifies single nucleotide variants from sequencing data based on the difference of binomially distributed mismatch rates between matched samples.
@@ -12,5 +12,7 @@ VignetteBuilder: knitr
 Encoding: UTF-8
 ByteCompile: TRUE
 License: GPL-3
+URL: https://github.com/juliangehring/Rariant
+BugReports: https://support.bioconductor.org
 LazyLoad: yes
 biocViews: Sequencing, StatisticalMethod, GenomicVariation, SomaticMutation, VariantDetection, Visualization
